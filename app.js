@@ -4,12 +4,13 @@ const carInfo = {
     brand: "Audi",
     model: "A6",
     letBrand() {
-        return console.log(`Брэнд: ${this.brand}`)
+        return (`Брэнд: ${this.brand}`)
     },
     calcNum: function (a,b) {
         return a + b
     }
 }
+console.log(carInfo.letBrand())
 
 // // Задание 2
 carInfo.contry = "Germany"
@@ -27,10 +28,10 @@ const userInfo = {
   };
 function objConvert() {
     for (let i in userInfo) {
-      console.log(`${i} : ${userInfo[i]}`);
+      return (`${i} : ${userInfo[i]}`);
     }
   }
-objConvert()
+console.log(objConvert())
 
 // Задание 5
 
@@ -47,7 +48,7 @@ const userInfo = {
 
 function letObject() {
   for (let key in userInfo) {
-    if (typeof userInfo[key] == "object" || null) {
+    if (typeof userInfo[key] === "object" || null) {
       return false;
     }
   }
